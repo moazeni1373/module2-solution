@@ -16,7 +16,7 @@
     color: white;
   }
   
-  .food-section1 {
+  .food-section {
     float: left;
     width: 33.33%;
     padding: 20px;
@@ -25,7 +25,7 @@
     position: relative; /* Add relative positioning for section title */
   }
   
-  .section-title1 {
+  .section-title {
     position: absolute;
     top: 0;
     right: 0;
@@ -35,36 +35,27 @@
   }
   
   /* Media queries for different screen sizes */
-  @media (min-width: 992px) {
-    .food-section1 {
-      float: left;
-      width: 33.33%;
+  @media (max-width: 991px) {
+    .food-section {
+      float: none;
+      width: 100%;
+      margin-bottom: 20px; /* Add spacing between sections */
     }
     
+    .section-title {
+      position: static;
+      background-color: #2196F3;
+    }
   }
   
-  @media (min-width:768px) and (max-width: 991px) {
-    .food-section2,.food-section3 {
-      float: left;
-    }
-    .food-section2 { 
-        width: 100%;
-    }
-    .food-section3 { 
-        margin-left: -10px;
-        width: 100%;
-    }
-    .section-title3 {
-      margin-right: 65px;
+  @media (max-width: 767px) {
+    .food-section {
       width: 100%;
+      margin-bottom: 20px;
+    }
+    
+    .section-title {
+      background-color: #4CAF50;
     }
   }
-  @media (min-width: 0px) and (max-width: 767px) {
-    .food-section3 {
-        float: left;
-        width: 100%
-    }
-    .content-section-title { 
-        margin-right: 30px;
-    }
-  }
+  
