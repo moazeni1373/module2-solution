@@ -1,61 +1,48 @@
-/* Reset default margins and paddings */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  border: 1px solid black;
+  margin: 10px;
+  padding: 20px;
+}
+
+.section-title {
+  background-color: #FF5733;
+  color: white;
+  padding: 5px 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+@media (min-width: 992px) {
+  .section {
+      flex: 1;
   }
-  
-  body {
-    font-family: Arial, sans-serif;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .section {
+      flex: 1;
+      width: 50%;
   }
-  
-  header {
-    text-align: center;
-    padding: 20px;
-    background-color: #333;
-    color: white;
-  }
-  
-  .food-section {
-    float: left;
-    width: 33.33%;
-    padding: 20px;
-    border: 1px solid black;
-    background-color: #f7f7f7;
-    position: relative; /* Add relative positioning for section title */
-  }
-  
-  .section-title {
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 10px;
-    background-color: #f44336;
-    color: white;
-  }
-  
-  /* Media queries for different screen sizes */
-  @media (max-width: 991px) {
-    .food-section {
-      float: none;
+  .section:nth-child(3) {
       width: 100%;
-      margin-bottom: 20px; /* Add spacing between sections */
-    }
-    
-    .section-title {
-      position: static;
-      background-color: #2196F3;
-    }
   }
-  
-  @media (max-width: 767px) {
-    .food-section {
+}
+
+@media (max-width: 767px) {
+  .section {
       width: 100%;
-      margin-bottom: 20px;
-    }
-    
-    .section-title {
-      background-color: #4CAF50;
-    }
   }
-  
+}
